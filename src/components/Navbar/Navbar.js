@@ -1,15 +1,17 @@
 import './Navbar.css';
 
-import moon from '../../imgs/moon-regular.svg';
+import darkMoon from '../../imgs/dark-moon.png';
+import whiteMoon from '../../imgs/white-moon.png';
 
 
-function Navbar(){
+
+function Navbar(props){
   return (
     <>
-      <nav className="navbar">
+      <nav className={props.darkMode ? "navbar dark" : "navbar"}>
         <h1>Where in the world?</h1>
-        <div className="toggle">
-          <img src={moon} />
+        <div className="toggle" onClick={props.toggleDarkMode} >   
+         <img src={props.darkMode ? whiteMoon : darkMoon} />
           <h2>Dark Mode</h2>
         </div>
       </nav>

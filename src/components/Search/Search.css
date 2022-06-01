@@ -1,0 +1,27 @@
+.search-comp{
+  width: 100%;
+  text-align: center;
+  padding-top: 1.2rem;
+  position: relative;
+}
+.search-comp img{
+  position: absolute;
+  width: 25px;
+  top: 1.9rem;
+  left: 2.2rem;
+}
+
+.search-comp input{
+  width: 88%;
+  height: 2.8rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding-left: 3.8rem;
+  font-size: 14px;
+  font-weight: 300;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.10);;
+}
+::placeholder{
+  color: hsl(0, 0%, 52%);
+}

@@ -4,3 +4,52 @@
 .light{
   background-color: hsl(0, 0%, 98%);
 }
+.countries{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+}
+.allCountries{
+  border-radius: 7px;
+  width: 100%;
+  height: auto;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.10);
+  margin-bottom: 1rem;
+}
+.flag{
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  width: 100%;
+  height: 10.938rem;
+  
+}
+.allCountries-link{
+  text-decoration: none;
+
+}
+
+.all-countries-detail{
+  padding-left: 1rem;
+  padding-bottom: 2rem;
+}
+.all-countries-name{
+  font-size: 1rem;
+  color: hsl(200, 15%, 8%);
+  font-weight: 800;
+}
+
+.all-countries-population,
+.all-countries-region,
+.all-countries-capital{
+  margin: 0;
+  padding-bottom: .4rem;
+  color: hsl(200, 15%, 8%);
+  font-weight: 600;
+}
+.all-countries-population span,
+.all-countries-region span,
+.all-countries-capital span{
+  font-weight: 300;
+  padding-left: .3rem;
+}

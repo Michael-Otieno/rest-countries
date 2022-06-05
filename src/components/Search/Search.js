@@ -1,13 +1,26 @@
 import searchIcon from '../../imgs/search.png';
-import './Search.css'
+import './Search.css';
+import {useState} from 'react';
 
 
-function Search(){
+function Search({onSearch}){
+  const [input, setInput] = useState("");
+
+  const submitHandler = (e) =>{
+    e.preventDefault();
+    onSearch(input)
+  }
   return (
-    <div className="search-comp">
+    <form className="search-comp" onSubmit={submitHandler} >
       <img src={searchIcon} />
-      <input type="search" placeholder="Search for a country..."/>
-    </div>
+      <input
+       type="search"
+        placeholder="Search for a country..."
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+
+      />
+    </form>
   )
 }
 

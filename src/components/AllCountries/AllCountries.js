@@ -6,7 +6,7 @@ import Search from "../Search/Search";
 import Filter from "../Filter/Filter";
 import { apiUrl } from "../util/api";
 
-function Main() {
+function AllCountries() {
   const [countries, setCountries] = useState([]);
   const [error, setError] = useState("");
 
@@ -22,22 +22,46 @@ function Main() {
     }
   };
 
+  const getCountryByName = async (name) => {
+   try{
+     const res = await fetch(`${apiUrl}/name/${name}`);
+     if (!res.ok) throw new Error("Country not found");
+
+     const data = await res.json();
+     setCountries(data)
+
+   }catch(error){
+    setError(error.message)
+  }};
+
+  const getCountryByRegion = async (region) => {
+    try{
+      const res = await fetch(`${apiUrl}/region/${region}`);
+      if (!res.ok) throw new Error("Not found")
+
+      const data = await res.json();
+      setCountries(data);
+    }catch (error){
+      setError(error.message);
+    }
+  }
+
   useEffect(() => {
     getAllCountries();
   }, []);
 
   return (
     <div>
-      <Search />
-      <Filter />
+      <Search onSearch={getCountryByName} />
+      <Filter onSelect={getCountryByRegion} />
       <div className="countries">
+
         {error && <h3>{error}</h3>}
         {countries?.map((country) => (
-          <div className="allCountries">
+          <div className="allCountries" key={country.name.common}>
             <Link
               className="allCountries-link"
-              key={country.name.common}
-              to="/country"
+              to={`/country/${country.name.common}`}
             >
               <img className="flag" src={country.flags.png} alt="flag" />
 
@@ -64,4 +88,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default AllCountries;

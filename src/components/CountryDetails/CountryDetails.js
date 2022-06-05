@@ -1,6 +1,11 @@
+import {Link} from 'react-router-dom';
+
 function CountryDetails(){
   return (
-    <div>CountryDetails</div>
+    <div>
+      <Link to='/'>Back</Link>
+      CountryDetails
+    </div>
   )
 }
 

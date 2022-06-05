@@ -2,7 +2,9 @@ import {useState} from 'react'
 
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
-import Main from './components/Main/Main';
+import AllCountries from './components/AllCountries/AllCountries';
+import CountryDetails from './components/CountryDetails/CountryDetails';
+
 
 
 function App() {
@@ -14,13 +16,9 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar 
-        darkMode={darkMode}
-        toggleDarkMode={toggleDarkMode}
-      />
-      <Main
-        darkMode={darkMode}
-      />
+      <Navbar />
+      <AllCountries />
+      <CountryDetails />
     </div>
   );
 }

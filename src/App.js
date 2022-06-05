@@ -4,6 +4,7 @@ import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import AllCountries from './components/AllCountries/AllCountries';
 import CountryDetails from './components/CountryDetails/CountryDetails';
+import {Routes, Route} from 'react-router-dom';
 
 
 
@@ -17,8 +18,10 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <AllCountries />
-      <CountryDetails />
+      <Routes>
+        <Route path='/' element={<AllCountries />} />
+        <Route path='/country' element={<CountryDetails />} />
+      </Routes>     
     </div>
   );
 }

@@ -9,7 +9,7 @@ function Main(props) {
   const [country, setCountry] = useState("") 
   
   const getCountries = async () => {
-    const res = await fetch("https://restcountries.com/v3.1/all");
+    const res = await fetch("");
     const data = await res.json()
 
     setCountry(data)

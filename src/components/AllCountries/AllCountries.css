@@ -4,11 +4,16 @@
 .light{
   background-color: hsl(0, 0%, 98%);
 }
+.all-countries-div{
+  background-color: hsl(0, 0%, 98%);
+}
+
 .countries{
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 300px;
+  /* width: 98%; */
 }
 .allCountries{
   border-radius: 7px;
@@ -52,4 +57,25 @@
 .all-countries-capital span{
   font-weight: 300;
   padding-left: .3rem;
+}
+
+@media only screen and (min-width: 1000px){
+  .search-filter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: 2rem;
+    margin-bottom: 1rem;
+  }
+  .countries{
+    display: grid;
+    grid-template-columns: 240px 240px 240px 240px;
+    grid-template-rows: 350px 400px;
+    gap: 5rem;
+    width: 91%;
+
+  }
+  .allCountries{
+    width: 280px;
+  }
 }

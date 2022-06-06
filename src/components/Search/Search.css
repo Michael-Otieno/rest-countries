@@ -25,3 +25,13 @@
 ::placeholder{
   color: hsl(0, 0%, 52%);
 }
+
+
+@media only screen and (min-width: 1000px){
+  .search-comp{
+    width: 40%;
+  }
+  .search-comp img{
+    left: 2.6rem;
+  }
+}

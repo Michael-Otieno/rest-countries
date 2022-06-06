@@ -51,9 +51,12 @@ function AllCountries() {
   }, []);
 
   return (
-    <div>
-      <Search onSearch={getCountryByName} />
-      <Filter onSelect={getCountryByRegion} />
+    <div className="all-countries-div">
+      <div className="search-filter">
+        <Search onSearch={getCountryByName} />
+        <Filter onSelect={getCountryByRegion} />
+      </div>
+     
       <div className="countries">
 
         {error && <h3>{error}</h3>}

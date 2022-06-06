@@ -1,11 +1,36 @@
-import {Link} from 'react-router-dom';
+import {Link, useParams} from 'react-router-dom';
 import arrow from '../../imgs/arrow.png';
-import './CountryDetails.css'
+import './CountryDetails.css';
+import {useEffect, useState} from 'react';
+import {apiUrl} from '../util/api';
 
 
 function CountryDetails(){
+  const [country, setCountry] = useState([]);
+  const [error, setError] = useState("");
+
+  const {name} = useParams();
+  const borders = country.map((country, key) => country.borders);
+  const languages = country.map((country) => country.languages);
+
+
+  useEffect(() => {
+    const getCountryByName = async () => {
+      try{
+        const res = await fetch(`${apiUrl}/name/${name}`);
+        if (!res.ok) throw new Error("Not found");
+        const data = await res.json()
+        setCountry(data)
+
+      }catch (error){
+        setError(error.message);
+      }
+    }
+    getCountryByName()
+  }, [name])
+
   return (
-    <div>
+    <div className='country-detail-div'>
       <Link className='link' to='/'>
         <button className='back--btn'>
           <img className='arrow-left' src={arrow} alt="left arrow" />
@@ -13,7 +38,41 @@ function CountryDetails(){
         </button>
       </Link>
       <div>
-        Details
+      {error && { error }}
+        {country?.map((country, index) => (
+          <div className='country' key={index}>
+            <img src={country.flags.png} />
+            <h3>{country.name.common}</h3>
+            <p>Native Name: 
+              <span>{country.name.official}</span>
+            </p>
+            <p>Population: 
+              <span>{country.population}</span>
+            </p>
+            <p>Region: 
+              <span>{country.region}</span>
+            </p>
+            <p>Sub Region: 
+              <span>{country.subregion}</span>
+            </p>
+            <p>Capital: 
+              <span>{country.capital}</span>
+            </p>
+            <p className='domain'>Top Level Domain: 
+              <span>{country.tld}</span>
+            </p>
+            <p>Currencies: 
+              <span>{}</span>
+            </p>
+            <p>Languages: 
+              <span></span>
+            </p>
+            <p className='borders'>Border Countries: <br/>
+              <span>{country.borders}</span>
+            </p>
+          
+          </div>
+        ))}
       </div>
     </div>
   )

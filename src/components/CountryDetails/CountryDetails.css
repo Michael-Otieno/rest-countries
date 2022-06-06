@@ -1,8 +1,13 @@
+.country-detail-div{
+  background-color: hsl(0, 0%, 98%);
+  padding-top: 2.5rem;
+}
+
 .back--btn{
   border: none;
   outline: none;
-  margin-top: 2.5rem;
   margin-left: 2rem;
+  margin-bottom: 3rem;
   padding: .8rem 2rem;
   text-align: center;
   border-radius: 5px;
@@ -27,4 +32,41 @@
 .link{
   text-decoration: none;
   color: hsl(200, 15%, 8%);
+}
+.country{
+  width: 90%;
+  margin-left: 2rem;
+  
+}
+.country img{
+  width: 90%;
+  height: 200px;
+}
+.country h3{
+  font-size: 16px;
+  font-weight: 800;
+  color: hsl(200, 15%, 8%);
+  margin-block: 2rem;
+}
+
+.country p{
+  color: hsl(200, 15%, 8%);
+  font-weight: 600;
+  font-size: 16px;
+
+}
+
+.country span{
+  margin-left: .5rem;
+  font-weight: 300;
+}
+.domain{
+  margin-top: 2rem;
+}
+.borders{
+  margin-top: 2rem;
+}
+
+.borders span{
+  margin: 0;
 }

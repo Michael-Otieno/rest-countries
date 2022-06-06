@@ -1,1 +1,7 @@
 
+.App{
+  overflow: hidden;
+}
+.routes{
+  background-color: rebeccapurple;
+}

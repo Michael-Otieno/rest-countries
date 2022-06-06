@@ -20,3 +20,9 @@
   outline: none;
   border: none;
 }
+
+@media only screen and (min-width: 1000px){
+  .filter select{
+    width: 100%;
+  }
+}

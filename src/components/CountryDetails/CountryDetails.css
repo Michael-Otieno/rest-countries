@@ -2,7 +2,6 @@
   background-color: hsl(0, 0%, 98%);
   padding-top: 2.5rem;
 }
-
 .back--btn{
   border: none;
   outline: none;
@@ -23,7 +22,6 @@
   width:18px;
   height: 18px;
 }
-
 .back--btn span{
   font-size: 16px;
   font-weight: 300;
@@ -48,14 +46,12 @@
   color: hsl(200, 15%, 8%);
   margin-block: 2rem;
 }
-
 .country p{
   color: hsl(200, 15%, 8%);
   font-weight: 600;
   font-size: 16px;
 
 }
-
 .country span{
   margin-left: .5rem;
   font-weight: 300;
@@ -66,7 +62,40 @@
 .borders{
   margin-top: 2rem;
 }
-
 .borders span{
   margin: 0;
+}
+@media only screen and (min-width: 1000px){
+  .back--btn{
+    width: 10%;
+  }
+  .country{
+    width: 100%;
+    display: flex;
+    align-items: top;
+  }
+  .country img{
+    width: 40%;
+    height: 350px;
+    margin-right: 5rem;
+
+  }
+  .name-level-flex{
+    display: flex;
+    /* justify-content: space-between; */
+    /* align-items: top; */
+  }
+  .top-domain{
+    margin-left:7rem;
+  }
+  .domain{
+    margin-top: 1rem;
+  }
+  .borders{
+    margin-top: 1rem;
+  }
+  .borders span{
+    margin-left: 1rem;
+  }
+
 }

@@ -65,6 +65,11 @@ const proudOfThisFunc = () => {
 ```
 
 ### Continued development
+To work on: 
+- Get native name from the api
+- Get languages from Api
+- Style borders
+- Style Filter component
 
 
 
@@ -80,4 +85,4 @@ const proudOfThisFunc = () => {
 
 ## Acknowledgments
 - [Frontend Mentor](frontendmentor.io/challenges)
-- 
+

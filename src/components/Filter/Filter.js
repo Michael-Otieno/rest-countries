@@ -18,6 +18,7 @@ function Filter({onSelect}){
         <option value="Oceania">Oceania</option>
       </select>
     </div>
+    
   )
 }
 

@@ -17,10 +17,10 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
+      <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <Routes>
-        <Route path='/' element={<AllCountries />} />
-        <Route path='/country/:name' element={<CountryDetails />} />
+        <Route path='/' element={<AllCountries darkMode={darkMode} />} />
+        <Route path='/country/:name' element={<CountryDetails darkMode={darkMode} />} />
       </Routes>     
     </div>
   );

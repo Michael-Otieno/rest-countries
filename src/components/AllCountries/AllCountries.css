@@ -1,19 +1,21 @@
 .mainDark{
-  background-color: hsl(207, 26%, 17%);
+  background-color: hsl(209, 23%, 22%);
+  color: white;
 }
 .light{
-  background-color: hsl(0, 0%, 98%);
+  /* background-color: hsl(0, 0%, 98%); */
+  color: hsl(209, 23%, 22%);
 }
 .all-countries-div{
-  background-color: hsl(0, 0%, 98%);
+  min-height: 100vh;
+  /* background-color: hsl(0, 0%, 98%); */
+  /* background-color: hsl(209, 23%, 22%); */
 }
-
 .countries{
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 300px;
-  /* width: 98%; */
 }
 .allCountries{
   border-radius: 7px;
@@ -33,23 +35,24 @@
   text-decoration: none;
 
 }
-
 .all-countries-detail{
   padding-left: 1rem;
   padding-bottom: 2rem;
 }
+
+
+
 .all-countries-name{
   font-size: 1rem;
-  color: hsl(200, 15%, 8%);
+  /* color: hsl(200, 15%, 8%); */
+  
   font-weight: 800;
 }
-
 .all-countries-population,
 .all-countries-region,
 .all-countries-capital{
   margin: 0;
   padding-bottom: .4rem;
-  color: hsl(200, 15%, 8%);
   font-weight: 600;
 }
 .all-countries-population span,

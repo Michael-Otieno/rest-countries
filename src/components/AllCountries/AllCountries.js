@@ -6,7 +6,7 @@ import Search from "../Search/Search";
 import Filter from "../Filter/Filter";
 import { apiUrl } from "../util/api";
 
-function AllCountries() {
+function AllCountries(props) {
   const [countries, setCountries] = useState([]);
   const [error, setError] = useState("");
 
@@ -51,9 +51,9 @@ function AllCountries() {
   }, []);
 
   return (
-    <div className="all-countries-div">
+    <div className={props.darkMode ? "all-countries-div mainDark" : "all-countries-div light"}>
       <div className="search-filter">
-        <Search onSearch={getCountryByName} />
+        <Search onSearch={getCountryByName} darkMode={props.darkMode} />
         <Filter onSelect={getCountryByRegion} />
       </div>
      
@@ -68,7 +68,7 @@ function AllCountries() {
             >
               <img className="flag" src={country.flags.png} alt="flag" />
 
-              <div className="all-countries-detail">
+              <div className={props.darkMode ? "all-countries-detail mainDark" : "all-countries-detail light"}>
                 <h2 className="all-countries-name">{country.name.common}</h2>
                 <p className="all-countries-population">
                   Population:

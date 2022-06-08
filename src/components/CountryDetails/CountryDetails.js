@@ -1,16 +1,17 @@
 import { Link, useParams } from "react-router-dom";
-import arrow from "../../imgs/arrow.png";
+import arrowBlack from "../../imgs/arrowBlack.png";
+import arrowWhite from "../../imgs/arrowWhite.png";
 import "./CountryDetails.css";
 import { useEffect, useState } from "react";
 import { apiUrl } from "../util/api";
 
-function CountryDetails() {
+function CountryDetails(props) {
   const [country, setCountry] = useState([]);
   const [error, setError] = useState("");
 
   const { name } = useParams();
-  const borders = country.map((country, key) => country.borders);
-  const languages = country.map((country) => country.languages);
+  // const borders = country.map((country, key) => country.borders);
+  // const languages = country.map((country) => country.languages);
 
   useEffect(() => {
     const getCountryByName = async () => {
@@ -27,10 +28,10 @@ function CountryDetails() {
   }, [name]);
 
   return (
-    <div className="country-detail-div">
+    <div className={props.darkMode ? "country-detail-div country-detail-dark" : "country-detail-div"}>
       <Link className="link" to="/">
-        <button className="back--btn">
-          <img className="arrow-left" src={arrow} alt="left arrow" />
+        <button className={props.darkMode ? "back--btn country-detail-dark" : "back--btn"}  >
+          <img className="arrow-left" src={props.darkMode ? arrowWhite : arrowBlack} alt="left arrow" />
           <span>Back</span>
         </button>
       </Link>

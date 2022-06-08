@@ -3,7 +3,7 @@ import './Search.css';
 import {useState} from 'react';
 
 
-function Search({onSearch}){
+function Search({onSearch, darkMode}){
   const [input, setInput] = useState("");
 
   const submitHandler = (e) =>{
@@ -11,7 +11,7 @@ function Search({onSearch}){
     onSearch(input)
   }
   return (
-    <form className="search-comp" onSubmit={submitHandler} >
+    <form className={darkMode ? "search-comp search-dark" : "search-comp"} onSubmit={submitHandler} >
       <img src={searchIcon} />
       <input
        type="search"

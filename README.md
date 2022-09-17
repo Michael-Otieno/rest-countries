@@ -1,25 +1,4 @@
-# Frontend Mentor - REST Countries API with color theme switcher solution
-
-This is a solution to the [REST Countries API with color theme switcher challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
-
-## Table of contents
-
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-
-
-
-## Overview
-
-### The challenge
+# REST Countries API with color theme switcher solution
 
 Users should be able to:
 
@@ -30,19 +9,16 @@ Users should be able to:
 - Click through to the border countries on the detail page
 - Toggle the color scheme between light and dark mode *(optional)*
 
-### Screenshot
+## Screenshot
 
 ![<img src="./desktop-preview.jpg" alt="image" width="400px" height="300px"](./desktop-preview.jpg)
 <!-- ![<img src="./mobile-design-detail-dark.jpg" alt="image" width="500px" height="400px"](./mobile-design-detail-dark.jpg) -->
 
-### Links
+## Live link
 
-- Solution URL: [Frontend mentor solution url]([https://your-solution-url.com](https://www.frontendmentor.io/solutions/frontend-mentor-rest-countries-api-with-color-theme-switcher-solutio-nqip8-6YcI))
 - Live Site URL: [Live link](https://rest-countries-xi-nine.vercel.app/)
 
-## My process
-
-### Built with
+## Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
@@ -50,39 +26,34 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [Styled Components](https://styled-components.com/) - For styles
 
-### What I learned
+## Requirements
+- Install Node/NPM package in your computer
 
-Working with Apis in React
+## Running the project
 
-
-```
-```reactjs
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-### Continued development
-To work on: 
-- Get native name from the api
-- Get languages from Api
-- Style borders
-- Style Filter component
+- `git clone https://github.com/Michael-Otieno/rest-countries/`
+- In the project directory, run `npm i`
+- In the project directory, run npm start to start the project
+- Open http://localhost:3000 to view it in your browser.
 
 
+## Further help
+- Feel free to fork and initiate changes that may improve the site.
+- For any assistances, contact m.otieno205@gmail.com.
 
-### Useful resources
-
-- [React](https://reactjs.org/) - Reactjs documentation
-
-
-## Author
-- Website - [Michael Otieno](https://otieno-mike.netlify.app/dist/index.html)
-- Twitter - [@mike_can_code](https://www.twitter.com/mike_can_code)
-- Linkedin - [Michael Otieno](https://www.linkedin.com/in/michael-oduor-otieno/)
 
 ## Acknowledgments
 - [Frontend Mentor](frontendmentor.io/challenges)
+
+## MIT Licence
+Copyright (c) 2020 Ania Kubow
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+*Translation: Ofcourse you can use this for you project! Just make sure to say where you got this from :)
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
